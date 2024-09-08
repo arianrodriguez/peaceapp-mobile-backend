@@ -14,6 +14,6 @@ public class LocationService {
     }
 
     public Location saveLocation(LocationSchema location) {
-        return repository.save(new Location(location.latitude(), location.longitude()));
+        return repository.save(new Location(location.latitude(), location.longitude(), location.idReport()));
     }
 }

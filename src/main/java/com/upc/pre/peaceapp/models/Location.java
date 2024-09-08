@@ -21,9 +21,15 @@ public class Location extends AuditableAbstractAggregateRoot<Location> {
     @Column(name="longitude", nullable = false, length = 30)
     private String aLongitude;
 
-    public Location(String aLatitude, String aLongitude) {
+    @Getter
+    @Setter
+    @Column(name="id_report", nullable = false)
+    private Long idReport;
+
+    public Location(String aLatitude, String aLongitude, Long idReport) {
         this.aLatitude = aLatitude;
         this.aLongitude = aLongitude;
+        this.idReport = idReport;
     }
 
     public Location() {
