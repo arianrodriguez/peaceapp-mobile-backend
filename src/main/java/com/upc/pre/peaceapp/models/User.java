@@ -3,8 +3,10 @@ package com.upc.pre.peaceapp.models;
 import com.upc.pre.peaceapp.shared.documentation.models.AuditableAbstractAggregateRoot;
 import jakarta.persistence.Entity;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 @Entity
 public class User extends AuditableAbstractAggregateRoot<User> {
     private String name;
